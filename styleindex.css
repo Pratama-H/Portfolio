@@ -1,0 +1,90 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+@keyframes spin_01{
+    0%{
+        transform: rotate(0deg);   
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    }
+    @keyframes bounceTop_01{
+        0%,100%{
+            transform: translateY(-50px);
+        }
+        50%{
+            transform: translateY(10px);
+        }
+    }
+    body{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .section-title{
+        margin-bottom: 50px;
+    }
+    .section-padding{
+        padding: 80px;
+    }
+    .section-title h2{
+        font-size: 50px;
+        color: var(--black-900);
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+    .home{
+        min-height: 100vh;
+        padding: 150px 300px;
+        background:url(assets/dark.png);
+        border-radius: 0 0 0 200px;
+       }
+       .home-text h1{
+           font-size: 50px;
+           font-weight: 700;
+           margin: 0 0 20px;
+       }
+       .home-text p{
+           font-size: 30px;
+           line-height: 24px;
+           color:white;
+           font-weight: 300px;
+           margin: 0   s;
+       }
+       .home-img img{
+           max-width: 320px;
+           width: 100%; 
+           box-shadow: var(--shadow-black-100);
+           border-radius: 32px;
+           animation: bounceTop_01 3s ease infinite;
+       }
+       .home-img{
+           position: relative;
+       }
+       .home-img .circle{
+           position: absolute;
+           z-index: 1;
+           height: 400px;
+           width: 400px;
+           border: 1px solid rgba(255,255, 255, 0.2);
+           border-radius: 50%;
+           left: 5%;
+           top: 1%;
+           transform: translate(-1%,-5%);
+       }
+       .home-img .circle::before{
+           content: "";
+           position: absolute;
+           height: 60px;
+           width: 60px;
+           background-color: blueviolet;
+           border-radius: 50%;
+           left: 30px;
+           top: 30px;
+           transform-origin: 170px 170px;
+           animation: spin_01 10s linear infinite;
+       }
+     
+       .carousel-inner{
+         height: 500px;
+       }
+     
